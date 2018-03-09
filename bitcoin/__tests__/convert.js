@@ -73,6 +73,8 @@ test('should throw when representaion is undefined', () => {
 });
 
 test('should allow untest aliases', () => {
-  convert(4.6, 'Satoshi', 'sat');
-  convert(4.6, 'μBTC', 'btest');
+  expect(() => {
+    convert(4.6, 'Satoshi', 'sat');
+    convert(4.6, 'μBTC', 'btest');
+  }).toThrow();
 });
