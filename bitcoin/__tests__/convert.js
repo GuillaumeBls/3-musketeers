@@ -78,3 +78,15 @@ test('should allow untest aliases', () => {
     convert(4.6, 'μBTC', 'btest');
   }).toThrow();
 });
+
+test('should throw when the unit already exist with another factor', () => {
+  expect(() => {
+    convert.addUnit('BTC',10);
+  }).toThrow();
+});
+
+test('should throw when unit is predifined', () => {
+  expect(() => {
+    convert.removeUnit('sat');
+  }).toThrow();
+});
