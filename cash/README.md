@@ -6,7 +6,6 @@
 - The default currencies is EUR and GBP
 - The default currencies can be change 
 
-    
 ## Exemple
 
 ### Conversion
@@ -34,7 +33,7 @@ The settings are inside appData
 
 ## List of currencies 
 
-In the libraries 
+In the library lib/currencies.js
 
 "AUD": "Australian Dollar",
 "RUB": "Russian Rouble",
@@ -69,6 +68,12 @@ In the libraries
 "ZAR": "South African Rand",
 "NZD": "New Zealand Dollar"
 
+## Licence
 
+Uncopyrighted 
+
+1.0.0
+
+The command to obtain the version is node index.js -v
 
 
