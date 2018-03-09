@@ -8,6 +8,13 @@ const config = new Conf();
 
 updateNotifier({pkg}).notify();
 
+/**
+SaveCurrencies enables to change the default setting 
+Entry parameters :
+- argv (user entry : string|array)
+
+No return
+*/ 
 const saveCurrencies = argv => {
   config.set('defaultFrom', argv[1] || config.get('defaultFrom', 'USD'));
   config.set(
@@ -25,6 +32,9 @@ const version = () => {
   process.exit(1);
 };
 
+
+/** Display the differents command to the user
+*/
 const help = () => {
   console.log(`
 Usage:
@@ -57,6 +67,13 @@ Examples:
   process.exit(1);
 };
 
+/**
+Launch the differents function of the helpers
+Entry parameters :
+- argv (user entry : string|array)
+
+No return
+*/ 
 const helpers = argv => {
   // Version
   if (argv.indexOf('--version') !== - 1 || argv.indexOf('-v') !== - 1) {

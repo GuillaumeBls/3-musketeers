@@ -7,6 +7,18 @@ const currencies = require('../lib/currencies.json');
 
 const API = 'https://api.fixer.io/latest';
 
+
+/** 
+Convert the valor of a currency (string) in a array of valor of other currencies (string)
+The entry parameters :
+- Amount (interger)
+- to (string|array)
+- from (string)
+- response (json)
+- loading (json)
+
+No return
+*/
 const convert = configuration => {
   const {amount, to, from, response, loading} = configuration;
 
@@ -34,6 +46,10 @@ const convert = configuration => {
   process.exit(1);
 };
 
+/** Deal with the differents displaying of the conversion and the API
+
+No return
+*/
 const cash = async command => {
   const amount = command.amount;
   const from = command.from.toUpperCase();

@@ -10,6 +10,10 @@ const argv = process.argv.slice(2);
 
 helpers(argv);
 
+/** @constant
+    @type {string|Array}
+    @default
+*/
 const command = {
   'amount': argv[0] || 1,
   'from': argv[1] || config.get('defaultFrom', 'USD'),
